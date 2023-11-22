@@ -5,15 +5,15 @@ import { FavoritesPageContainer } from './FavoritesPage.styled'
 import Card from '../../components/Card/Card'
 
 function FavoritesPage() {
-  const { favorites } = useContext(GlobalContext)
+  const { favorites, saveInLocalStorage, clearLocalStorage } = useContext(GlobalContext)
 
   return (
     <FavoritesPageContainer>
       <Header />
 
       <div>
-        <button>Salvar no local storage</button>
-        <button>Limpar local storage</button>
+        <button onClick={saveInLocalStorage}>Salvar no local storage</button>
+        <button onClick={clearLocalStorage}>Limpar local storage</button>
       </div>
 
       <div className='card-grid'>

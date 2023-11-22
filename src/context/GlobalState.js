@@ -10,16 +10,16 @@ const GlobalState = ({ children }) => {
 
   useEffect(() => {
     fetchDogs()
+    checkLocalStorageForFavorites()
   }, [])
 
   const fetchDogs = () => {
-    axios.get(BASE_URL + "/10") // gera 10 dogs aleatórios
+    axios.get(BASE_URL + "/10") // API retorna 10 urls de imagens de dogs
     .then((res) => {
-      const urls = res.data.message // retorna lista de urls em string
+      const urls = res.data.message
   
-      // modelamos em objetos a partir das urls (veja a pasta /utils)
       const dogs = urls.map(url => {
-        return createDogObjectFromUrl(url)
+        return createDogObjectFromUrl(url) // veja a pasta ./utils para entender
       })
 
       setDogs(dogs)
@@ -28,6 +28,15 @@ const GlobalState = ({ children }) => {
       console.log("Erro ao buscar a lista de dogs")
       console.log(err)
     })
+  }
+
+  const checkLocalStorageForFavorites = () => {
+    const favoritesJSON = window.localStorage.getItem("cypress-example-favorites")
+    
+    if (favoritesJSON) {
+      const savedFavorites = JSON.parse(favoritesJSON)
+      setFavorites(savedFavorites)
+    }
   }
 
   const addToFavorites = (dog) => {
@@ -45,12 +54,25 @@ const GlobalState = ({ children }) => {
     setFavorites(filteredFavorites)
   }
 
+  const saveInLocalStorage = () => {
+    if (favorites.length > 0) {
+      const favoritesJSON = JSON.stringify(favorites)
+      window.localStorage.setItem("cypress-example-favorites", favoritesJSON)
+    }
+  }
+
+  const clearLocalStorage = () => {
+    window.localStorage.clear("cypress-example-favorites")
+  }
+
   const data = {
     dogs: dogs,
     favorites,
     fetchDogs,
     addToFavorites,
-    removeFromFavorites
+    removeFromFavorites,
+    saveInLocalStorage,
+    clearLocalStorage
   }
 
   return (
