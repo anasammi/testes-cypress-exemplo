@@ -1,5 +1,3 @@
-[Link do surge](inconclusive-pig.surge.sh)
-
 # Testes em React I - Exemplo e Template de Prática
 **Vamos utilizar esse repositório para as práticas da aula!**
 
@@ -10,3 +8,6 @@
 3. Abra a pasta onde você guarda os materiais do curso pelo terminal.
 4. Baixe o repositório usando: git clone url-copiada.
 5. Abra a pasta no vscode. Vamos codar!
+
+## Link do Surge
+[Link do surge](inconclusive-pig.surge.sh)
