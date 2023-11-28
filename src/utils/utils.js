@@ -16,10 +16,10 @@ export const createDogObjectFromUrl = (url) => {
  toda resposta da API devolve uma url nessa estrutura,
  então essa lógica abaixo sempre funcionará
 
-1:
+PASSO 1
 url.split("/") quebra a url em um array:
 
-2:
+PASSO 2
 [
   "https:",
   "",
@@ -29,18 +29,22 @@ url.split("/") quebra a url em um array:
   "n02107312_2478.jpg"
 ]
 
-3:
+PASSO 3
 url.split("/")[4] pega o índice 4 do array
 "pinscher-miniature"
 
-4:
+PASSO 4
+breedWithDash.replace("-", " ") normaliza a string removendo os tracinhos "-"
+"pinscher miniature"
+
+PASSO 5
 e retornamos um objeto estruturado com id, breed e url
 {
   id: "https://images.dog.ceo/breeds/pinscher-miniature/n02107312_2478.jpg",
-  breed: "pinscher-miniature",
+  breed: "pinscher miniature",
   url: "https://images.dog.ceo/breeds/pinscher-miniature/n02107312_2478.jpg"
 )
 
-novamente, id só está se repetindo no objeto com o valor de url,
-porque url é única e não existe outro valor nesse caso que funcione 100% como id
+a id só está se repetindo no objeto com o valor de url,
+  porque url é única e não existe outro valor nesse caso que funcione 100% como id
 */
