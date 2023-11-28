@@ -1,4 +1,4 @@
-# Testes em React I - Exemplo e Template de Prática
+# Testes em React I (Cypress) - Exemplo e Template de Prática
 **Vamos utilizar esse repositório para as práticas da aula!**
 
 ## Instruções para baixar
