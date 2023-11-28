@@ -3,7 +3,7 @@ export const createDogObjectFromUrl = (url) => {
   const breedNormalized = breedWithDash.replace("-", " ")
 
   return {
-    id: url, // só tem url como algo único nesse dado da API
+    id: url,
     breed: breedNormalized,
     url: url
   }
@@ -46,5 +46,6 @@ e retornamos um objeto estruturado com id, breed e url
 )
 
 a id só está se repetindo no objeto com o valor de url,
-  porque url é única e não existe outro valor nesse caso que funcione 100% como id
+  porque toda url de cada dog é única
+    e não existe outro valor nessa API que funciona como id
 */
