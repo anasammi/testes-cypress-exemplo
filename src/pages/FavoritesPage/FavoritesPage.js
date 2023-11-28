@@ -16,7 +16,7 @@ function FavoritesPage() {
         <button onClick={clearLocalStorage}>Limpar local storage</button>
       </div>
 
-      <div className='card-grid'>
+      <div id='card-grid'>
         {favorites.map((dog) => {
           return (
             <Card dog={dog} key={dog.id} />

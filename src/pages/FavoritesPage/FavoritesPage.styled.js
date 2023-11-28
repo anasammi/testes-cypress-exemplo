@@ -22,7 +22,7 @@ export const FavoritesPageContainer = styled.div`
     margin-left: 32px;
   }
 
-  .card-grid {
+  #card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;

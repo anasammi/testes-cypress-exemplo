@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import GlobalContext from './GlobalContext';
 import axios from 'axios';
-import { BASE_URL } from '../constants/url';
+import { BASE_URL, TOKEN_NAME } from '../constants/constants';
 import { createDogObjectFromUrl } from '../utils/utils';
 
 const GlobalState = ({ children }) => {
@@ -31,7 +31,7 @@ const GlobalState = ({ children }) => {
   }
 
   const checkLocalStorageForFavorites = () => {
-    const favoritesJSON = window.localStorage.getItem("cypress-example-favorites")
+    const favoritesJSON = window.localStorage.getItem(TOKEN_NAME)
     
     if (favoritesJSON) {
       const savedFavorites = JSON.parse(favoritesJSON)
@@ -57,16 +57,16 @@ const GlobalState = ({ children }) => {
   const saveInLocalStorage = () => {
     if (favorites.length > 0) {
       const favoritesJSON = JSON.stringify(favorites)
-      window.localStorage.setItem("cypress-example-favorites", favoritesJSON)
+      window.localStorage.setItem(TOKEN_NAME, favoritesJSON)
     }
   }
 
   const clearLocalStorage = () => {
-    window.localStorage.clear("cypress-example-favorites")
+    window.localStorage.clear(TOKEN_NAME)
   }
 
   const data = {
-    dogs: dogs,
+    dogs,
     favorites,
     fetchDogs,
     addToFavorites,

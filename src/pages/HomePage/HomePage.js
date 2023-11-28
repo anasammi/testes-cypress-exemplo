@@ -27,11 +27,9 @@ function HomePage() {
         />
       </div>
 
-      <div className='card-grid'>
+      <div id='card-grid'>
         {dogs
-          // remove dogs favoritados para não aparecer na lista da homepage
           .filter((dog) => !favorites.some((favoritedDog) => dog.id === favoritedDog.id))
-          // filtra baseado no input de busca
           .filter((dog) => dog.breed.includes(search))
           .map((dog) => {
             return (

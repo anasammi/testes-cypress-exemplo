@@ -15,7 +15,7 @@ export const HomePageContainer = styled.div`
     }
   }
   
-  .card-grid {
+  #card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
