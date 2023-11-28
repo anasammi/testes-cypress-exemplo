@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { goToHomePage } from "../../routes/coordinator";
+import { useNavigate } from "react-router-dom"
+import { goToHomePage } from "../../routes/coordinator"
 
 function NotFoundPage() {
   const navigate = useNavigate()
@@ -11,7 +11,7 @@ function NotFoundPage() {
       <br />
       <button onClick={() => goToHomePage(navigate)} >Ir para Homepage</button>
     </div>
-  );
+  )
 }
 
-export default NotFoundPage;
+export default NotFoundPage

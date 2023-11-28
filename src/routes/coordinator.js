@@ -1,7 +1,7 @@
 export const goToHomePage = (navigate) => {
-  navigate("/");
-};
+  navigate("/")
+}
 
 export const goToFavoritesPage = (navigate) => {
-  navigate("/favorites");
-};
+  navigate("/favorites")
+}

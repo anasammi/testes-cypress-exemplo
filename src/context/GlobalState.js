@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import GlobalContext from './GlobalContext';
-import axios from 'axios';
-import { BASE_URL, TOKEN_NAME } from '../constants/constants';
-import { createDogObjectFromUrl } from '../utils/utils';
+import { useEffect, useState } from 'react'
+import GlobalContext from './GlobalContext'
+import axios from 'axios'
+import { BASE_URL, TOKEN_NAME } from '../constants/constants'
+import { createDogObjectFromUrl } from '../utils/utils'
 
 const GlobalState = ({ children }) => {
   const [ dogs, setDogs ] = useState([])
@@ -79,7 +79,7 @@ const GlobalState = ({ children }) => {
     <GlobalContext.Provider value={data}>
       {children}
     </GlobalContext.Provider>
-  );
-};
+  )
+}
 
-export default GlobalState;
+export default GlobalState

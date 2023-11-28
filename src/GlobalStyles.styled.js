@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
   html {
@@ -38,4 +38,4 @@ export const GlobalStyles = createGlobalStyle`
     border: 1px solid black;
     outline: none;
   }
-`;
+`
