@@ -16,7 +16,7 @@ function HomePage() {
     <HomePageContainer>
       <Header />
       <div>
-        <button onClick={fetchDogs} className='btn-generate'>Gerar novamente</button>
+        <button onClick={fetchDogs}>Gerar novamente</button>
         <input
           name="search"
           type="text"
