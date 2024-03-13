@@ -16,7 +16,7 @@ function HomePage() {
     <HomePageContainer>
       <Header />
       <div>
-        <button onClick={fetchDogs}>Gerar novamente</button>
+        <button onClick={fetchDogs} data-testid="regenerate-button">Gerar novamente</button>
         <input
           name="search"
           type="text"
@@ -24,6 +24,7 @@ function HomePage() {
           onChange={onChangeSearch}
           placeholder="Digite uma raça"
           autoComplete="off"
+          data-testid="filter-breed-input"
         />
       </div>
 

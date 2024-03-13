@@ -9,7 +9,7 @@ function NotFoundPage() {
       <br />
       <h1>Ops! Essa página não existe!</h1>
       <br />
-      <button onClick={() => goToHomePage(navigate)} >Ir para Homepage</button>
+      <button data-testid="go-homepage-button" onClick={() => goToHomePage(navigate)} >Ir para Homepage</button>
     </div>
   )
 }

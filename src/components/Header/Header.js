@@ -10,9 +10,9 @@ function Header() {
   const renderNavButton = () => {
     switch (location.pathname) {
       case "/":
-        return <button onClick={() => goToFavoritesPage(navigate)}>Ver favoritos</button>
+        return <button data-testid="go-to-favorites-button" onClick={() => goToFavoritesPage(navigate)}>Ver favoritos</button>
       case "/favorites":
-        return <button onClick={() => goToHomePage(navigate)}>Ir para Homepage</button>
+        return <button data-testid="go-to-homepage-button" onClick={() => goToHomePage(navigate)}>Ir para Homepage</button>
       default:
         return <></>
     }
